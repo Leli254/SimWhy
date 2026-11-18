@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simwhy"
+version = "0.0.1"
+description = "Counterfactual debugging for SimPy simulations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["simpy>=4.1"]
+
+[project.optional-dependencies]
+dev = ["pytest", "hypothesis", "ruff", "mypy", "pre-commit"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/simwhy"]
